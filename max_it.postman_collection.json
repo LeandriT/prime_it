@@ -1,0 +1,155 @@
+{
+  "info": {
+    "_postman_id": "bf5bc99d-8672-4080-b531-c05e1e0a48a5",
+    "name": "max_it",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "1378372"
+  },
+  "item": [
+    {
+      "name": "index",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{url}}:8080/api/users",
+          "host": [
+            "{{url}}"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"uuid\": \"550e8400-e29b-41d4-a716-446655440000\",\n    \"name\": \"Juan Carlos Pérez\",\n    \"email\": \"juan.perez2@example.com\",\n    \"password\":\"123\",\n    \"phones\": [\n        {\n            \"number\": \"12345678\",\n            \"city_code\": 2,\n            \"country_code\": 56\n        },\n        {\n            \"number\": \"87654321\",\n            \"city_code\": 9,\n            \"country_code\": 56\n        },\n        {\n            \"number\": \"55667788\",\n            \"city_code\": 2,\n            \"country_code\": 56\n        }\n    ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}:8080/api/users",
+          "host": [
+            "{{url}}"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \n    \"name\": \"Juan Carlos Ramirez\"\n    \n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}:8080/api/users/aa5cd50d-131b-41fe-858f-d9e94793bcb9",
+          "host": [
+            "{{url}}"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "users",
+            "aa5cd50d-131b-41fe-858f-d9e94793bcb9"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Partial update",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \n    \"active\": false\n    \n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}:8080/api/users/aa5cd50d-131b-41fe-858f-d9e94793bcb9",
+          "host": [
+            "{{url}}"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "users",
+            "aa5cd50d-131b-41fe-858f-d9e94793bcb9"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "show",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{url}}:8080/api/users/aa5cd50d-131b-41fe-858f-d9e94793bcb9",
+          "host": [
+            "{{url}}"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "users",
+            "aa5cd50d-131b-41fe-858f-d9e94793bcb9"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{url}}:8080/api/users/aa5cd50d-131b-41fe-858f-d9e94793bcb9",
+          "host": [
+            "{{url}}"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "users",
+            "aa5cd50d-131b-41fe-858f-d9e94793bcb9"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

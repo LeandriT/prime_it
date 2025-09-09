@@ -1,0 +1,80 @@
+@startuml
+title User Registration - Solution Architecture
+
+skinparam packageStyle rectangle
+skinparam shadowing false
+
+actor Client
+
+package "user_service" {
+
+  package "Controller" {
+    component UserController
+  }
+
+  package "Service" {
+    component UserServiceImpl
+    interface UserService
+    component JwtServiceImpl
+    interface JwtService
+  }
+
+  package "Repository" {
+    interface UserRepository
+  }
+
+  package "Mapper" {
+    component UserMapper
+  }
+
+  package "DTO-Request" {
+    component UserRequest
+    component PartialUserRequest
+    component PhoneRequest
+  }
+
+  package "DTO-Response" {
+    component UserResponse
+    component PhoneResponse
+  }
+
+  package "Domain-Model" {
+    component User
+    component Phone
+  }
+}
+
+database H2DB
+component JWT
+component OpenAPI
+component Jacoco
+
+' Relaciones principales
+Client --> UserController : HTTP REST API
+UserController --> UserServiceImpl
+UserServiceImpl ..|> UserService
+UserServiceImpl --> UserRepository
+UserServiceImpl --> UserMapper
+UserServiceImpl --> JwtServiceImpl
+JwtServiceImpl ..|> JwtService
+UserRepository --> H2DB
+
+' Relaciones con DTOs
+UserController --> UserRequest
+UserController --> PartialUserRequest
+UserController --> UserResponse
+UserResponse --> PhoneResponse
+UserRequest --> PhoneRequest
+User --> Phone
+
+' Mapeo
+UserMapper --> User
+UserMapper --> UserRequest
+UserMapper --> UserResponse
+
+' Componentes externos
+UserController --> OpenAPI
+UserServiceImpl --> Jacoco
+JwtServiceImpl --> JWT
+
+@enduml
