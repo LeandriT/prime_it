@@ -1,0 +1,22 @@
+{
+  "name": "#{name}",
+  "email": "#{email}",
+  "password": "#{password}",
+  "phones": [
+    {
+      "number": "#{phone1_number}",
+      "city_code": "#{phone1_city_code}",
+      "country_code": "#{phone1_country_code}"
+    },
+    {
+      "number": "#{phone2_number}",
+      "city_code": "#{phone2_city_code}",
+      "country_code": "#{phone2_country_code}"
+    },
+    {
+      "number": "#{phone3_number}",
+      "city_code": "#{phone3_city_code}",
+      "country_code": "#{phone3_country_code}"
+    }
+  ]
+}

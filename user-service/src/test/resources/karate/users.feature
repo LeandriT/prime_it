@@ -27,6 +27,7 @@ Feature: Users API
     And request payload
     When method post
     Then status 201
+    # Mantener estas validaciones, ya que validan el contenido de la respuesta de creación
     And match response.uuid == '#string'
     And match response.name == 'John Smith'
     And match response.email == 'john.smith@test.dev'
@@ -36,8 +37,33 @@ Feature: Users API
     Given path 'api/users', uid
     When method get
     Then status 200
+    # **Solución**: Combina todas las validaciones en un solo 'match'
+    And match response ==
+      """
+      {
+        "uuid": "#string",
+        "name": "#string",
+        "email": "#string",
+        "created_at": "#string",
+        "updated_at": "#string",
+        "last_login": "#string",
+        "token": "#string",
+        "phones": "#array",
+        "is_active": "#boolean"
+      }
+      """
+    # Para validar campos específicos, puedes usar la notación 'contains' o validarlos en la misma estructura.
     And match response.uuid == uid
     And match response.email == 'john.smith@test.dev'
+    And match each response.phones[*] ==
+      """
+      {
+        "uuid": "#string",
+        "number": "#string",
+        "city_code": "#string",
+        "country_code": "#string"
+      }
+      """
 
     # patch (active=false)
     * def patchReq = { "active": false }

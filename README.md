@@ -1,7 +1,7 @@
 # User Service
 
 El proyecto **User Service** fue desarrollado con **Java 21, Spring Boot 3.5.5, Hibernate, H2 database, Docker,
-OpenAPI (Swagger), JUnit5, Jacoco y Karate**.  
+OpenAPI (Swagger), JUnit5, Jacoco, Karate y Gatling**.  
 Se aplicaron prácticas de **TDD, Clean Code y principios SOLID**.
 
 Este microservicio permite registrar usuarios junto con una lista de teléfonos.  
@@ -21,6 +21,7 @@ exponen **endpoints CRUD** para la entidad `User`.
 - **OpenAPI / Swagger UI**
 - **JUnit 5 & Jacoco** (unit testing + cobertura)
 - **Karate** (tests end-to-end de la API REST)
+- **Gatling** (pruebas de carga y rendimiento)
 
 ---
 
@@ -51,12 +52,17 @@ exponen **endpoints CRUD** para la entidad `User`.
    ./gradlew test --tests "*KarateSuiteIT*"
    ```
    El reporte HTML queda en `build/karate-reports/karate-summary.html`.
-6. Acceso a la consola H2:
+6. Ejecutar pruebas de rendimiento con **Gatling**:
+   ```bash
+   ./gradlew clean gatlingRun --all
+   ```
+   Al finalizar se generan reportes HTML individuales en: `build/reports/gatling/<simulación>/index.html`
+7. Acceso a la consola H2:
     - URL: [http://localhost:8080/h2-console](http://localhost:8080/h2-console)
     - JDBC URL: `jdbc:h2:mem:users`
     - Usuario: `sa`
     - Password: *(vacío)*
-7. Acceso a la documentación OpenAPI/Swagger:
+8. Acceso a la documentación OpenAPI/Swagger:
     - [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
 
 ---
@@ -143,6 +149,10 @@ DELETE /api/users/{uuid}
 - **Karate** → Pruebas end-to-end de los endpoints REST (`users.feature`).
     - Validan el flujo completo: **crear → obtener → actualizar → patch → eliminar**.
     - Reportes en `build/karate-reports/`.
+- **Gatling** → Pruebas de rendimiento sobre endpoints de usuario (`CreateUserSimulation`, `IndexUserSimulation`,
+  `PartialUpdateUserSimulation`).
+    - Se ejecutan con `./gradlew clean gatlingRun --all`
+    - Reportes en `build/reports/gatling/`.
 
 ---
 
@@ -153,5 +163,3 @@ DELETE /api/users/{uuid}
 ## ✍️ Autor
 
 - [@GandhyCuasapas](https://github.com/LeandriT)
-
----
