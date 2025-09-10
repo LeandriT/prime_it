@@ -1,0 +1,11 @@
+name,email,password,phone1_number,phone1_city_code,phone1_country_code,phone2_number,phone2_city_code,phone2_country_code,phone3_number,phone3_city_code,phone3_country_code,active
+Allison Hill,blairamanda2824@example.com,S3cret!,800914773,2,+56,800914774,2,+56,800914775,2,+56,true
+Noah Rhodes,smiller1409@example.com,S3cret!,800914773,2,+56,800914774,2,+56,800914775,2,+56,true
+Angie Henderson,barbara105506@example.com,S3cret!,800914773,2,+56,800914774,2,+56,800914775,2,+56,true
+Daniel Wagner,kendragalloway5012@example.com,S3cret!,800914773,2,+56,800914774,2,+56,800914775,2,+56,true
+Cristian Santos,michellejames4657@example.com,S3cret!,800914773,2,+56,800914774,2,+56,800914775,2,+56,true
+Connie Lawrence,xreid3286@example.com,S3cret!,800914773,2,+56,800914774,2,+56,800914775,2,+56,true
+Abigail Shaffer,mitchellclark2679@example.com,S3cret!,800914773,2,+56,800914774,2,+56,800914775,2,+56,true
+Gina Moore,jacqueline199935@example.com,S3cret!,800914773,2,+56,800914774,2,+56,800914775,2,+56,false
+Gabrielle Davis,amandasanchez2424@example.com,S3cret!,800914773,2,+56,800914774,2,+56,800914775,2,+56,true
+Ryan Munoz,ogray7912@example.com,S3cret!,800914773,2,+56,800914774,2,+56,800914775,2,+56,false

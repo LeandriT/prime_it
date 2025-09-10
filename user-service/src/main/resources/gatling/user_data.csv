@@ -1,0 +1,11 @@
+name,email,password,phone1_number,phone1_city_code,phone1_country_code,phone2_number,phone2_city_code,phone2_country_code,phone3_number,phone3_city_code,phone3_country_code
+Juan Perez,juan.perez1@example.com,S3cret!,800914773,2,+56,800914774,2,+56,800914775,2,+56
+Maria Gomez,maria.gomez2@example.com,S3cret!,800914776,2,+56,800914777,2,+56,800914778,2,+56
+Carlos Ruiz,carlos.ruiz3@example.com,S3cret!,800914779,2,+56,800914780,2,+56,800914781,2,+56
+Ana Lopez,ana.lopez4@example.com,S3cret!,800914782,2,+56,800914783,2,+56,800914784,2,+56
+Pedro Ramirez,pedro.ramirez5@example.com,S3cret!,800914785,2,+56,800914786,2,+56,800914787,2,+56
+Sofia Hernandez,sofia.hernandez6@example.com,S3cret!,800914788,2,+56,800914789,2,+56,800914790,2,+56
+Luis Martinez,luis.martinez7@example.com,S3cret!,800914791,2,+56,800914792,2,+56,800914793,2,+56
+Laura Diaz,laura.diaz8@example.com,S3cret!,800914794,2,+56,800914795,2,+56,800914796,2,+56
+Miguel Sanchez,miguel.sanchez9@example.com,S3cret!,800914797,2,+56,800914798,2,+56,800914799,2,+56
+Elena Vargas,elena.vargas10@example.com,S3cret!,800914800,2,+56,800914801,2,+56,800914802,2,+56
